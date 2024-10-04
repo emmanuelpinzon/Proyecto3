@@ -16,5 +16,14 @@ public class ExceptionChecker {
 		if (m.find()) {
 			throw new InvalidWordException();
 		}
+	
 	}
+public static void checkNumber(String input) throws InvalidNumberException {
+    if (input.matches(".*\\d.")) {
+        throw new InvalidNumberException(); 
+    }
 }
+}
+
+
+
