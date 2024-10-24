@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 public class VentanaPrincipal extends JFrame {
 
     private MenuPrincipal menuPpal;
-
+    private PanelMenuPaciente panelMenuPpal;
 
     public VentanaPrincipal() {
         setLocation(70, 70);
@@ -23,6 +23,7 @@ public class VentanaPrincipal extends JFrame {
         setIconImage(logo.getImage());
 
         menuPpal = new MenuPrincipal();
+        panelMenuPpal = new PanelMenuPaciente();
 
     }
 
@@ -40,6 +41,21 @@ public class VentanaPrincipal extends JFrame {
     public MenuPrincipal getMenuPpal() {
         return menuPpal;
     }
+
+
+	public void mostrarPanelMenuPaciente() {
+        setContentPane(panelMenuPpal);
+		revalidate();
+		repaint();
+    }
+
+
+    public PanelMenuPaciente getPanelMenuPpal() {
+        return panelMenuPpal;
+    }
+
+
+
 
 
 

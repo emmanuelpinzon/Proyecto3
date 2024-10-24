@@ -1,6 +1,7 @@
 package co.edu.unbosque.mail;
 
 import java.util.Properties;
+
 import javax.mail.Message;
 import javax.mail.Session;
 import javax.mail.Transport;

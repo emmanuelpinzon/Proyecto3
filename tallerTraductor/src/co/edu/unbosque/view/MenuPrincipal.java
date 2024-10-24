@@ -18,36 +18,30 @@ public class MenuPrincipal extends JPanel {
 		setVisible(true);
 
 		imagenPpal = new JLabel();
-		ImageIcon imagen1 = new ImageIcon("src/media/MenuPrincipall.png");
+		ImageIcon imagen1 = new ImageIcon("src/media/MenuPrincipal.png");
 
 		Image redimensionado = imagen1.getImage().getScaledInstance(1280, 720, Image.SCALE_SMOOTH);
 		imagenPpal.setIcon(new ImageIcon(redimensionado));
 		imagenPpal.setBounds(0, 0, 1280, 720);
 
 		btnPaciente = new JButton("paciente");
-		btnPaciente.setBounds(350, 328, 300, 110);
+		btnPaciente.setBounds(150, 470, 300, 105);
 		btnPaciente.setOpaque(false);
 		btnPaciente.setActionCommand("PACIENTE");
 
 		btnEspecialista = new JButton("especialista ");
-		btnEspecialista.setBounds(700, 338, 300, 100);
+		btnEspecialista.setBounds(850, 470, 320, 105);
 		btnEspecialista.setOpaque(false);
 		btnEspecialista.setActionCommand("ESPECIALISTA");
 		
 		add(imagenPpal);
 		add(btnPaciente);
 		add(btnEspecialista);
-
+	
 
 	}
 
-	public JLabel getImagenPpal() {
-		return imagenPpal;
-	}
 
-	public void setImagenPpal(JLabel imagenPpal) {
-		this.imagenPpal = imagenPpal;
-	}
 
 	public JButton getbtnPaciente() {
 		return btnPaciente;
@@ -63,6 +57,13 @@ public class MenuPrincipal extends JPanel {
 
 	public void setbtnEspecialista(JButton btnEspecialista) {
 		this.btnEspecialista = btnEspecialista;
+	}
+	public JLabel getImagenPpal() {
+		return imagenPpal;
+	}
+
+	public void setImagenPpal(JLabel imagenPpal) {
+		this.imagenPpal = imagenPpal;
 	}
 
 }
