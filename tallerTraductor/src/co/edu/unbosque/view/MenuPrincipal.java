@@ -34,9 +34,12 @@ public class MenuPrincipal extends JPanel {
 		btnEspecialista.setOpaque(false);
 		btnEspecialista.setActionCommand("ESPECIALISTA");
 		
-		add(imagenPpal);
+		
+		
+		
 		add(btnPaciente);
 		add(btnEspecialista);
+		add(imagenPpal);
 	
 
 	}
