@@ -101,7 +101,8 @@ public class Controlador implements ActionListener {
 		vf.getPrincipal().getPanelMenuPrincipalPaciente().getBtnReprogramarCita().setActionCommand("reprogramar cita paciente");
 
 		vf.getPrincipal().getPanelReprogramarCitaPaciente().getBtnVolverRr().addActionListener(this);
-		vf.getPrincipal().getPanelReprogramarCitaPaciente().getBtnVolverRr().setActionCommand("volver de reprogramar cita paciente a menu principal paciente");
+		vf.getPrincipal().getPanelReprogramarCitaPaciente().getBtnVolverRr()
+		.setActionCommand("volver de reprogramar cita paciente a menu principal paciente");
 
 		vf.getPrincipal().getPanelRegistroPaciente().getNombre().setVisible(true);
 		vf.getPrincipal().getPanelRegistroPaciente().getNumeroDocumento().setVisible(true);
@@ -408,6 +409,8 @@ public class Controlador implements ActionListener {
 			menuPpalP = true;
 
 			break;
+			
+//	mmm		
 
 		}
 	}
