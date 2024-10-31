@@ -15,6 +15,8 @@ public class VentanaPrincipal extends JFrame {
     private PanelRegistroEspecialista panelRegistroE;
     private PanelMenuPrincipalPaciente panelMenuPpalP;
     private PanelMenuPrincipalEspecialista panelMenuPpalE;
+    private PanelAgendarCitaPaciente panelAgendarCitaP;
+    private PanelReprogramarCitaPaciente panelReprogramarCitaP;
 
     public VentanaPrincipal() {
         setLocation(70, 70);
@@ -38,6 +40,8 @@ public class VentanaPrincipal extends JFrame {
         panelRegistroE = new PanelRegistroEspecialista();
         panelMenuPpalP = new PanelMenuPrincipalPaciente();
         panelMenuPpalE = new PanelMenuPrincipalEspecialista();
+        panelAgendarCitaP = new PanelAgendarCitaPaciente();
+        panelReprogramarCitaP = new PanelReprogramarCitaPaciente();
     }
 
 
@@ -151,12 +155,29 @@ public class VentanaPrincipal extends JFrame {
     public PanelMenuPrincipalEspecialista getPanelMenuPrincipalEspecialista() {
         return panelMenuPpalE;
     }
-
-
-
-	
-
     
+    
+    public void mostrarPanelAgendarCitaPaciente() {
+        setContentPane(panelAgendarCitaP);
+		revalidate();
+		repaint();
+    }
+
+
+    public PanelAgendarCitaPaciente getPanelAgendarCitaPaciente() {
+        return panelAgendarCitaP;
+    }
+
+    public void mostrarPanelReprogramarCitaPaciente() {
+        setContentPane(panelReprogramarCitaP);
+		revalidate();
+		repaint();
+    }
+
+
+    public PanelReprogramarCitaPaciente getPanelReprogramarCitaPaciente() {
+        return panelReprogramarCitaP;
+    }
 
 
 

@@ -20,6 +20,8 @@ public class Controlador implements ActionListener {
     private boolean menuE = false;
     private boolean menuPpalP = false;
     private boolean menuPpalE = false;
+    private boolean agendarCitaP = false;
+    private boolean reprogramarCitaP = false;
     
     public Controlador() {
         vf = new ViewFacade();
@@ -87,6 +89,18 @@ public class Controlador implements ActionListener {
         
         vf.getPrincipal().getPanelMenuPrincipalEspecialista().getBtnVolverEE().addActionListener(this);
         vf.getPrincipal().getPanelMenuPrincipalEspecialista().getBtnVolverEE().setActionCommand("volver al inicio sesion desde menu principal especialista");
+        
+        vf.getPrincipal().getPanelMenuPrincipalPaciente().getBtnAgendarCita().addActionListener(this);
+        vf.getPrincipal().getPanelMenuPrincipalPaciente().getBtnAgendarCita().setActionCommand("agendar cita paciente");
+        
+        vf.getPrincipal().getPanelAgendarCitaPaciente().getBtnVolverCc().addActionListener(this);
+        vf.getPrincipal().getPanelAgendarCitaPaciente().getBtnVolverCc().setActionCommand("volver de agendar cita paciente a menu principal paciente");
+        
+        vf.getPrincipal().getPanelMenuPrincipalPaciente().getBtnReprogramarCita().addActionListener(this);
+        vf.getPrincipal().getPanelMenuPrincipalPaciente().getBtnReprogramarCita().setActionCommand("reprogramar cita paciente");
+        
+        vf.getPrincipal().getPanelReprogramarCitaPaciente().getBtnVolverRr().addActionListener(this);
+        vf.getPrincipal().getPanelReprogramarCitaPaciente().getBtnVolverRr().setActionCommand("volver de reprogramar cita paciente a menu principal paciente");
         
         vf.getPrincipal().getPanelRegistroPaciente().getNombre().setVisible(true);
 		vf.getPrincipal().getPanelRegistroPaciente().getNumeroDocumento().setVisible(true);
@@ -297,8 +311,6 @@ public class Controlador implements ActionListener {
     			
             case "menu principal de paciente":
             	
-            	
-            	
             	vf.getPrincipal().setTitle("MENU PRINCIPAL");
     			
     			vf.getPrincipal().getPanelInicioSesionP().getImagenInicioSesionP().setVisible(false);
@@ -317,8 +329,6 @@ public class Controlador implements ActionListener {
     			break;
     			
             case "menu principal de especialista":
-            	
-            	
             	
             	vf.getPrincipal().setTitle("MENU PRINCIPAL");
     			
@@ -365,10 +375,64 @@ public class Controlador implements ActionListener {
         			menuE = true;
         			
         			break;
+        			
     			
-    		    
+    			
+    			case "agendar cita paciente":
+    				
+    				vf.getPrincipal().setTitle("MENU PRINCIPAL");
+    				
+    				vf.getPrincipal().getPanelMenuPrincipalPaciente().getImagenMenuPpalP().setVisible(false);
+        			vf.getPrincipal().getPanelAgendarCitaPaciente().getImagenAgendarCitaP().setVisible(true);
+        			
+        			vf.getPrincipal().mostrarPanelAgendarCitaPaciente();
+        			 
+        			menuPpalP = false;
+        			agendarCitaP = true;
+        			
+        			break;
+        			
+    			case "volver de agendar cita paciente a menu principal paciente":
+    				
+    				vf.getPrincipal().setTitle("MENU PRINCIPAL");
+        			
+        			vf.getPrincipal().getPanelAgendarCitaPaciente().getImagenAgendarCitaP().setVisible(false);
+        			vf.getPrincipal().getPanelMenuPrincipalPaciente().getImagenMenuPpalP().setVisible(true);
+        			
+        			vf.getPrincipal().mostrarPanelMenuPrincipalPaciente();
+        			 
+        			agendarCitaP = false;
+        			menuPpalP = true;
+        			
+        			break;
+        			
+    			case "reprogramar cita paciente":
+    				
+    				vf.getPrincipal().setTitle("MENU PRINCIPAL");
+    				
+    				vf.getPrincipal().getPanelMenuPrincipalPaciente().getImagenMenuPpalP().setVisible(false);
+        			vf.getPrincipal().getPanelReprogramarCitaPaciente().getImagenReprogramarCitaP().setVisible(true);
+        			
+        			vf.getPrincipal().mostrarPanelReprogramarCitaPaciente();
+        			 
+        			menuPpalP = false;
+        			reprogramarCitaP = true;
+        			
+        			break;
     	        
-    			
+    			case "volver de reprogramar cita paciente a menu principal paciente":
+    				
+    				vf.getPrincipal().setTitle("MENU PRINCIPAL");
+        			
+        			vf.getPrincipal().getPanelReprogramarCitaPaciente().getImagenReprogramarCitaP().setVisible(false);
+        			vf.getPrincipal().getPanelMenuPrincipalPaciente().getImagenMenuPpalP().setVisible(true);
+        			
+        			vf.getPrincipal().mostrarPanelMenuPrincipalPaciente();
+        			 
+        			reprogramarCitaP = false;
+        			menuPpalP = true;
+        			
+        			break;
            
     			
     		

@@ -62,7 +62,7 @@ public class PanelMenuPrincipalPaciente extends JPanel {
         btnVolverPP.setActionCommand("VOLVER");
         
         imagenMenuPpalP = new JLabel();
-        ImageIcon imagen1 = new ImageIcon("src/media/MenuPrincipalPaciente.png");
+        ImageIcon imagen1 = new ImageIcon("src/media/MenuPaciente1.png");
         Image redimensionado1 = imagen1.getImage().getScaledInstance(1280, 720, Image.SCALE_SMOOTH);
         imagenMenuPpalP.setIcon(new ImageIcon(redimensionado1));
         imagenMenuPpalP.setBounds(0, 0, 1280, 720);
