@@ -8,6 +8,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.Border;
 
@@ -16,7 +17,7 @@ import javax.swing.border.Border;
 
 		
 		private JTextField numeroDocumento, contraseña;
-	    private JButton  btnIniciarSesion, btnVolver;
+	    private JButton  btnIniciarSesion, btnVolverP;
 	    private JLabel imagenInicioSesionP;
 
 	    public PanelInicioSesionPaciente() {
@@ -35,7 +36,7 @@ import javax.swing.border.Border;
 			numeroDocumento.setBounds(200, 507, 300, 55);
 			numeroDocumento.setOpaque(true);
 
-			contraseña = new JTextField();
+			contraseña = new JPasswordField();
 			contraseña.setBounds(800, 507, 300, 55);
 			contraseña.setOpaque(true);
 			
@@ -50,10 +51,10 @@ import javax.swing.border.Border;
 	        btnIniciarSesion.setActionCommand("INICIAR SESION");
 
 	        // Botón "Volver"
-	        btnVolver = new JButton("Volver");
-	        btnVolver.setBounds(450, 610, 150, 50); // Posición ajustada
-	        btnVolver.setOpaque(true);
-	        btnVolver.setActionCommand("VOLVER");
+	        btnVolverP = new JButton("Volver");
+	        btnVolverP.setBounds(450, 610, 150, 50); // Posición ajustada
+	        btnVolverP.setOpaque(true);
+	        btnVolverP.setActionCommand("VOLVER");
 	        
 
 	        imagenInicioSesionP = new JLabel();
@@ -69,7 +70,7 @@ import javax.swing.border.Border;
 	       	add(numeroDocumento);
 	        add(contraseña);
 	        add(btnIniciarSesion);
-	        add(btnVolver);
+	        add(btnVolverP);
 	        
 	        add(imagenInicioSesionP);
 	        
@@ -78,7 +79,7 @@ import javax.swing.border.Border;
 	        setComponentZOrder(numeroDocumento, 0);
 	        setComponentZOrder(contraseña, 1);
 	        setComponentZOrder(btnIniciarSesion, 2);
-	        setComponentZOrder(btnVolver, 3);
+	        setComponentZOrder(btnVolverP, 3);
 	        setComponentZOrder(imagenInicioSesionP, 4);
 	           }
 
@@ -115,13 +116,13 @@ import javax.swing.border.Border;
 		}
 
 
-		public JButton getBtnVolver() {
-			return btnVolver;
+		public JButton getBtnVolverP() {
+			return btnVolverP;
 		}
 
 
-		public void setBtnVolver(JButton btnVolver) {
-			this.btnVolver = btnVolver;
+		public void setBtnVolverP(JButton btnVolverP) {
+			this.btnVolverP = btnVolverP;
 		}
 	    
 		public JLabel getImagenInicioSesionP() {

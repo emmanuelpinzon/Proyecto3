@@ -15,7 +15,8 @@ public class PanelRegistroPaciente extends JPanel {
 
 	
 	private JTextField nombre, numeroDocumento, correo, contraseña;
-    private JButton  btnRegistrar, btnVolver;
+	private JComboBox<String> jcbGenero;
+    private JButton  btnRegistrarP, btnVolverP1;
     private JLabel imagenRegistroP;
     
 
@@ -41,29 +42,42 @@ public class PanelRegistroPaciente extends JPanel {
 		correo.setBounds(780, 345, 300, 62);
 		correo.setOpaque(true);
 		
-		contraseña = new JTextField();
+		contraseña = new JPasswordField();
 		contraseña.setBounds(785, 507, 300, 55);
 		contraseña.setOpaque(true);
 		
+		String[] genero = { "Femenino", "Masculino" };
+		DefaultComboBoxModel<String> modelo = new DefaultComboBoxModel<>(genero);
+
+		jcbGenero = new JComboBox<>(modelo);
+		jcbGenero.setBounds(500, 500, 280, 50);
+		jcbGenero.setFont(new Font("Arial", Font.PLAIN, 16));
+		add(jcbGenero);
+
+		
+
+		setVisible(true);
+
+	
 
     
 
         // Botón "Registrarse"
 		
-        btnRegistrar = new JButton("Registrar");
-        btnRegistrar.setBounds(640, 600, 200, 50); // Posición ajustada
-        btnRegistrar.setOpaque(true);
-        btnRegistrar.setActionCommand("REGISTRAR");
+        btnRegistrarP = new JButton("Registrar");
+        btnRegistrarP.setBounds(640, 600, 200, 50); // Posición ajustada
+        btnRegistrarP.setOpaque(true);
+        btnRegistrarP.setActionCommand("REGISTRAR");
 
         // Botón "Volver"
-        btnVolver = new JButton("Volver");
-        btnVolver.setBounds(490, 610, 150, 50); // Posición ajustada
-        btnVolver.setOpaque(true);
-        btnVolver.setActionCommand("VOLVER");
+        btnVolverP1 = new JButton("Volver");
+        btnVolverP1.setBounds(490, 610, 150, 50); // Posición ajustada
+        btnVolverP1.setOpaque(true);
+        btnVolverP1.setActionCommand("VOLVER");
         
 
         imagenRegistroP = new JLabel();
-        ImageIcon imagen1 = new ImageIcon("src/media/RegistroPaciente.png");
+        ImageIcon imagen1 = new ImageIcon("src/media/RegistrarPaciente.png");
         Image redimensionado1 = imagen1.getImage().getScaledInstance(1280, 720, Image.SCALE_SMOOTH);
         imagenRegistroP.setIcon(new ImageIcon(redimensionado1));
         imagenRegistroP.setBounds(0, 0, 1280, 720);
@@ -75,8 +89,9 @@ public class PanelRegistroPaciente extends JPanel {
        	add(numeroDocumento);
        	add(correo);
        	add(contraseña);
-        add(btnRegistrar);
-        add(btnVolver);
+       	add(jcbGenero);
+        add(btnRegistrarP);
+        add(btnVolverP1);
         
         add(imagenRegistroP);
         
@@ -85,13 +100,12 @@ public class PanelRegistroPaciente extends JPanel {
         setComponentZOrder(numeroDocumento, 1);
         setComponentZOrder(correo, 2);
         setComponentZOrder(contraseña, 3);
-        setComponentZOrder(btnRegistrar, 4);
-        setComponentZOrder(btnVolver, 5);
-        setComponentZOrder(imagenRegistroP, 6);
+        setComponentZOrder(jcbGenero, 4);
+        setComponentZOrder(btnRegistrarP, 5);
+        setComponentZOrder(btnVolverP1, 6);
+        setComponentZOrder(imagenRegistroP, 7);
            }
 
-
-	
 
 	public JTextField getNombre() {
 		return nombre;
@@ -133,26 +147,36 @@ public class PanelRegistroPaciente extends JPanel {
 	}
 
 
-	public JButton getBtnRegistrar() {
-		return btnRegistrar;
+	public JComboBox<String> getJcbGenero() {
+		return jcbGenero;
 	}
 
 
-	public void setBtnRegistrar(JButton btnRegistrar) {
-		this.btnRegistrar = btnRegistrar;
+	public void setJcbGenero(JComboBox<String> jcbGenero) {
+		this.jcbGenero = jcbGenero;
 	}
 
 
-	public JButton getBtnVolver() {
-		return btnVolver;
+	public JButton getBtnRegistrarP() {
+		return btnRegistrarP;
 	}
 
 
-	public void setBtnVolver(JButton btnVolver) {
-		this.btnVolver = btnVolver;
+	public void setBtnRegistrarP(JButton btnRegistrarP) {
+		this.btnRegistrarP = btnRegistrarP;
 	}
 
-	
+
+	public JButton getBtnVolverP1() {
+		return btnVolverP1;
+	}
+
+
+	public void setBtnVolverP1(JButton btnVolverP1) {
+		this.btnVolverP1 = btnVolverP1;
+	}
+
+
 	public JLabel getImagenRegistroP() {
 		return imagenRegistroP;
 	}
@@ -161,5 +185,11 @@ public class PanelRegistroPaciente extends JPanel {
 	public void setImagenRegistroP(JLabel imagenRegistroP) {
 		this.imagenRegistroP = imagenRegistroP;
 	}
+
+
+	
+
+
+
 
     }

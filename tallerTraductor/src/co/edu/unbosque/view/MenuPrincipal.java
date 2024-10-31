@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 public class MenuPrincipal extends JPanel {
 
 	private JLabel imagenPpal;
-	private JButton btnPaciente, btnEspecialista;
+	private JButton btnPaciente, btnEspecialista, btnDirectorM;
 
 	public MenuPrincipal() {
 
@@ -25,20 +25,24 @@ public class MenuPrincipal extends JPanel {
 		imagenPpal.setBounds(0, 0, 1280, 720);
 
 		btnPaciente = new JButton("paciente");
-		btnPaciente.setBounds(150, 470, 300, 105);
+		btnPaciente.setBounds(100, 470, 300, 105);
 		btnPaciente.setOpaque(false);
 		btnPaciente.setActionCommand("PACIENTE");
 
 		btnEspecialista = new JButton("especialista ");
-		btnEspecialista.setBounds(850, 470, 320, 105);
+		btnEspecialista.setBounds(900, 470, 320, 105);
 		btnEspecialista.setOpaque(false);
 		btnEspecialista.setActionCommand("ESPECIALISTA");
 		
-		
+		btnDirectorM = new JButton("director medico ");
+		btnDirectorM.setBounds(450, 470, 370, 105);
+		btnDirectorM.setOpaque(false);
+		btnDirectorM.setActionCommand("DIRECTOR MEDICO");
 		
 		
 		add(btnPaciente);
 		add(btnEspecialista);
+		add(btnDirectorM);
 		add(imagenPpal);
 	
 
@@ -60,6 +64,14 @@ public class MenuPrincipal extends JPanel {
 
 	public void setbtnEspecialista(JButton btnEspecialista) {
 		this.btnEspecialista = btnEspecialista;
+	}
+	
+	public JButton getbtnDirectorM() {
+		return btnDirectorM;
+	}
+
+	public void setbtnDirectorM(JButton btnDirectorM) {
+		this.btnDirectorM = btnDirectorM;
 	}
 	public JLabel getImagenPpal() {
 		return imagenPpal;

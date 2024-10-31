@@ -11,7 +11,10 @@ public class VentanaPrincipal extends JFrame {
     private PanelRegistroPaciente panelRegistroP;
     private PanelInicioSesionPaciente panelInicioSesionP;
     private PanelMenuEspecialista panelMenuE;
+    private PanelInicioSesionEspecialista panelInicioSesionE;
     private PanelRegistroEspecialista panelRegistroE;
+    private PanelMenuPrincipalPaciente panelMenuPpalP;
+    private PanelMenuPrincipalEspecialista panelMenuPpalE;
 
     public VentanaPrincipal() {
         setLocation(70, 70);
@@ -31,8 +34,10 @@ public class VentanaPrincipal extends JFrame {
         panelRegistroP = new PanelRegistroPaciente();
         panelInicioSesionP = new PanelInicioSesionPaciente();
         panelMenuE = new PanelMenuEspecialista();
+        panelInicioSesionE = new PanelInicioSesionEspecialista();
         panelRegistroE = new PanelRegistroEspecialista();
-
+        panelMenuPpalP = new PanelMenuPrincipalPaciente();
+        panelMenuPpalE = new PanelMenuPrincipalEspecialista();
     }
 
 
@@ -101,6 +106,18 @@ public class VentanaPrincipal extends JFrame {
     }
    
     
+    
+    public void mostrarPanelInicioSesionEspecialista() {
+        setContentPane(panelInicioSesionE);
+		revalidate();
+		repaint();
+    }
+
+
+    public PanelInicioSesionEspecialista getPanelInicioSesionE() {
+        return panelInicioSesionE;
+    }
+    
     public void mostrarPanelRegistroEspecialista() {
         setContentPane(panelRegistroE);
 		revalidate();
@@ -108,27 +125,37 @@ public class VentanaPrincipal extends JFrame {
     }
 
 
-    public PanelRegistroEspecialista getPanelRegistroE() {
+    public PanelRegistroEspecialista getPanelRegistroEspecialista() {
         return panelRegistroE;
+    }
+    
+    
+    public void mostrarPanelMenuPrincipalPaciente() {
+        setContentPane(panelMenuPpalP);
+		revalidate();
+		repaint();
+    }
+
+
+    public PanelMenuPrincipalPaciente getPanelMenuPrincipalPaciente() {
+        return panelMenuPpalP;
+    }
+
+    public void mostrarPanelMenuPrincipalEspecialista() {
+        setContentPane(panelMenuPpalE);
+		revalidate();
+		repaint();
+    }
+
+
+    public PanelMenuPrincipalEspecialista getPanelMenuPrincipalEspecialista() {
+        return panelMenuPpalE;
     }
 
 
 
+	
 
-
-	public PanelRegistroEspecialista getPanelRegistroEspecialista() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
-
-
-
-	public PanelRegistroPaciente getPanelRegistroP() {
-		return panelRegistroP;
-	}
-    
     
 
 

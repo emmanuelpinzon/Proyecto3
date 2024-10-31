@@ -14,8 +14,8 @@ import java.awt.*;
 public class PanelRegistroEspecialista extends JPanel {
 
 	
-	private JTextField nombre1, numeroDocumento1, correo1, contraseña1, tipoEspecialidad1;
-    private JButton  btnRegistrarE, btnVolver1;
+	private JTextField nombre, numeroDocumento, correo, contraseña, tipoEspecialidad;
+    private JButton  btnRegistrarE, btnVolverEs;
     private JLabel imagenRegistroE;
     
 
@@ -29,41 +29,40 @@ public class PanelRegistroEspecialista extends JPanel {
     
         
        
-		nombre1= new JTextField();
-		nombre1.setBounds(155, 345, 300, 60);
-		nombre1.setOpaque(true);
+		nombre= new JTextField();
+		nombre.setBounds(155, 345, 300, 60);
+		nombre.setOpaque(true);
 		
-		numeroDocumento1 = new JTextField();
-		numeroDocumento1.setBounds(160, 507, 300, 55);
-		numeroDocumento1.setOpaque(true);
+		numeroDocumento = new JTextField();
+		numeroDocumento.setBounds(160, 530, 300, 55);
+		numeroDocumento.setOpaque(true);
 
-		correo1 = new JTextField();
-		correo1.setBounds(780, 345, 300, 62);
-		correo1.setOpaque(true);
+		correo = new JTextField();
+		correo.setBounds(780, 345, 300, 62);
+		correo.setOpaque(true);
 		
-		contraseña1 = new JTextField();
-		contraseña1.setBounds(785, 507, 300, 55);
-		contraseña1.setOpaque(true);
+		contraseña = new JPasswordField();
+		contraseña.setBounds(930, 507, 300, 55);
+		contraseña.setOpaque(true);
 		
-		tipoEspecialidad1 = new JTextField();
-		tipoEspecialidad1.setBounds(785, 507, 300, 55);
-		contraseña1.setOpaque(true);
-		
+		tipoEspecialidad = new JPasswordField();
+		tipoEspecialidad.setBounds(530, 520, 260, 55);
+		tipoEspecialidad.setOpaque(true);
 
     
 
         // Botón "Registrarse"
 		
         btnRegistrarE = new JButton("Registrar");
-        btnRegistrarE.setBounds(640, 600, 200, 50); // Posición ajustada
+        btnRegistrarE.setBounds(690, 610, 160, 50); // Posición ajustada
         btnRegistrarE.setOpaque(true);
         btnRegistrarE.setActionCommand("REGISTRAR");
 
         // Botón "Volver"
-        btnVolver1 = new JButton("Volver");
-        btnVolver1.setBounds(490, 610, 150, 50); // Posición ajustada
-        btnVolver1.setOpaque(true);
-        btnVolver1.setActionCommand("VOLVER");
+        btnVolverEs = new JButton("Volver");
+        btnVolverEs.setBounds(490, 610, 150, 50); // Posición ajustada
+        btnVolverEs.setOpaque(true);
+        btnVolverEs.setActionCommand("VOLVER");
         
 
         imagenRegistroE = new JLabel();
@@ -75,78 +74,77 @@ public class PanelRegistroEspecialista extends JPanel {
 
         
         
-        add(nombre1);
-       	add(numeroDocumento1);
-       	add(correo1);
-       	add(contraseña1);
-       	add(tipoEspecialidad1);
+        add(nombre);
+       	add(numeroDocumento);
+       	add(correo);
+       	add(contraseña);
+       	add(tipoEspecialidad);
         add(btnRegistrarE);
-        add(btnVolver1);
+        add(btnVolverEs);
+        
         
         add(imagenRegistroE);
         
         
-        setComponentZOrder(nombre1, 0);
-        setComponentZOrder(numeroDocumento1, 1);
-        setComponentZOrder(correo1, 2);
-        setComponentZOrder(contraseña1, 3);
-        setComponentZOrder(tipoEspecialidad1, 4);
+        setComponentZOrder(nombre, 0);
+        setComponentZOrder(numeroDocumento, 1);
+        setComponentZOrder(correo, 2);
+        setComponentZOrder(contraseña, 3);
+        setComponentZOrder(tipoEspecialidad, 4);
         setComponentZOrder(btnRegistrarE, 5);
-        setComponentZOrder(btnVolver1, 6);
+        setComponentZOrder(btnVolverEs, 6);
         setComponentZOrder(imagenRegistroE, 7);
            }
 
 
-	
-
-	public JTextField getNombre1() {
-		return nombre1;
+	public JTextField getNombre() {
+		return nombre;
 	}
 
 
-	public void setNombre1(JTextField nombre1) {
-		this.nombre1 = nombre1;
+	public void setNombre(JTextField nombre) {
+		this.nombre = nombre;
 	}
 
 
-	public JTextField getNumeroDocumento1() {
-		return numeroDocumento1;
+	public JTextField getNumeroDocumento() {
+		return numeroDocumento;
 	}
 
 
-	public void setNumeroDocumento1(JTextField numeroDocumento1) {
-		this.numeroDocumento1 = numeroDocumento1;
+	public void setNumeroDocumento(JTextField numeroDocumento) {
+		this.numeroDocumento = numeroDocumento;
 	}
 
 
-	public JTextField getCorreo1() {
-		return correo1;
+	public JTextField getCorreo() {
+		return correo;
 	}
 
 
-	public void setCorreo1(JTextField correo1) {
-		this.correo1 = correo1;
+	public void setCorreo(JTextField correo) {
+		this.correo = correo;
 	}
 
 
-	public JTextField getContraseña1() {
-		return contraseña1;
+	public JTextField getContraseña() {
+		return contraseña;
 	}
 
 
-	public void setContraseña1(JTextField contraseña1) {
-		this.contraseña1 = contraseña1;
-	}
-	
-	public JTextField getTipoEspecialidad1() {
-		return tipoEspecialidad1;
+	public void setContraseña(JTextField contraseña) {
+		this.contraseña = contraseña;
 	}
 
 
-	public void setTipoEspecialidad1(JTextField tipoEspecialidad1) {
-		this.tipoEspecialidad1 = tipoEspecialidad1;
+	public JTextField getTipoEspecialidad() {
+		return tipoEspecialidad;
 	}
 
+
+	public void setTipoEspecialidad(JTextField tipoEspecialidad) {
+		this.tipoEspecialidad = tipoEspecialidad;
+	}
 
 
 	public JButton getBtnRegistrarE() {
@@ -159,16 +157,16 @@ public class PanelRegistroEspecialista extends JPanel {
 	}
 
 
-	public JButton getBtnVolver1() {
-		return btnVolver1;
+	public JButton getBtnVolverEs() {
+		return btnVolverEs;
 	}
 
 
-	public void setBtnVolver1(JButton btnVolver1) {
-		this.btnVolver1 = btnVolver1;
+	public void setBtnVolverEs(JButton btnVolverEs) {
+		this.btnVolverEs = btnVolverEs;
 	}
 
-	
+
 	public JLabel getImagenRegistroE() {
 		return imagenRegistroE;
 	}
@@ -178,4 +176,5 @@ public class PanelRegistroEspecialista extends JPanel {
 		this.imagenRegistroE = imagenRegistroE;
 	}
 
-    }
+
+}

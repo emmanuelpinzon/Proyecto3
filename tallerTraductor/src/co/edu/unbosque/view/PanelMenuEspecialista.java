@@ -14,7 +14,7 @@ import java.awt.*;
 public class PanelMenuEspecialista extends JPanel {
 
 	private JLabel imagenMenuE;
-    private JButton btnIniciarSesion, btnRegistrarse, btnVolver2;
+    private JButton btnIniciarSesionEs, btnRegistrarseE, btnVolver2;
 
     public PanelMenuEspecialista() {
         setLayout(null);
@@ -29,16 +29,16 @@ public class PanelMenuEspecialista extends JPanel {
         imagenMenuE.setBounds(0, 0, 1280, 720);
 
         // Botón "Iniciar sesión"
-        btnIniciarSesion = new JButton("Iniciar Sesión");
-        btnIniciarSesion.setBounds(205, 520, 310, 50); // Posición ajustada
-        btnIniciarSesion.setOpaque(false);
-        btnIniciarSesion.setActionCommand("INICIARSESION");
+        btnIniciarSesionEs = new JButton("Iniciar Sesión");
+        btnIniciarSesionEs.setBounds(205, 520, 310, 50); // Posición ajustada
+        btnIniciarSesionEs.setOpaque(false);
+        btnIniciarSesionEs.setActionCommand("INICIARSESION");
 
         // Botón "Registrarse"
-        btnRegistrarse = new JButton("Registrarse");
-        btnRegistrarse.setBounds(800, 520, 320, 50); // Posición ajustada
-        btnRegistrarse.setOpaque(false);
-        btnRegistrarse.setActionCommand("REGISTRARSE");
+        btnRegistrarseE = new JButton("Registrarse");
+        btnRegistrarseE.setBounds(800, 520, 320, 50); // Posición ajustada
+        btnRegistrarseE.setOpaque(false);
+        btnRegistrarseE.setActionCommand("REGISTRARSE");
 
         // Botón "Volver"
         btnVolver2 = new JButton("Volver");
@@ -52,8 +52,8 @@ public class PanelMenuEspecialista extends JPanel {
         
         
        
-        add(btnIniciarSesion);
-        add(btnRegistrarse);
+        add(btnIniciarSesionEs);
+        add(btnRegistrarseE);
         add(btnVolver2);
         add(imagenMenuE);
         
@@ -72,20 +72,20 @@ public class PanelMenuEspecialista extends JPanel {
 
    
 
-    public JButton getbtnIniciarSesion() {
-        return btnIniciarSesion;
+    public JButton getbtnIniciarSesionEs() {
+        return btnIniciarSesionEs;
     }
 
-    public void setbtnIniciarSesion(JButton btnIniciarSesion) {
-        this.btnIniciarSesion = btnIniciarSesion;
+    public void setbtnIniciarSesionEs(JButton btnIniciarSesionEs) {
+        this.btnIniciarSesionEs = btnIniciarSesionEs;
     }
 
-    public JButton getbtnRegistrarse() {
-        return btnRegistrarse;
+    public JButton getbtnRegistrarseE() {
+        return btnRegistrarseE;
     }
 
-    public void setbtnRegistrarse(JButton btnRegistrarse) {
-        this.btnRegistrarse = btnRegistrarse;
+    public void setbtnRegistrarseE(JButton btnRegistrarseE) {
+        this.btnRegistrarseE = btnRegistrarseE;
     }
 
     public JButton getbtnVolver2() {
