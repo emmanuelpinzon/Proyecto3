@@ -1,4 +1,4 @@
-package co.edu.unbosque.mail;
+package co.edu.unbosque.controller;
 
 import java.util.Properties;
 
@@ -8,7 +8,7 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-public class Mail {
+public class MailController {
 	static final String FROM = "emmanuelpinzon16@gmail.com";
 	static final String FROMNAME="Emmanuel";
 	static final String TO = "santipin168@gmail.com";

@@ -1,6 +1,12 @@
 package co.edu.unbosque.model;
 
-public class Especialista extends Persona {
+import java.io.Serializable;
+
+public class Especialista extends Persona implements Serializable{
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 private String tipoEspecialista;
 
 public Especialista() {
@@ -32,7 +38,7 @@ public void setTipoEspecialista(String tipoEspecialista) {
 
 @Override
 public String toString() {
-	return super.toString()+"tipoEspecialista=" + tipoEspecialista + "]";
+	return super.toString()+"\n tipoEspecialista: " + tipoEspecialista + "\n ";
 }
 
 }
