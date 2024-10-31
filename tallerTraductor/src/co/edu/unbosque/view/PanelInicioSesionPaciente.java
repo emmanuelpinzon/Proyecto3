@@ -34,10 +34,12 @@ import javax.swing.border.Border;
 			
 			numeroDocumento = new JTextField();
 			numeroDocumento.setBounds(200, 507, 300, 55);
+			numeroDocumento.setBorder(null);
 			numeroDocumento.setOpaque(true);
 
 			contraseña = new JPasswordField();
 			contraseña.setBounds(800, 507, 300, 55);
+			contraseña.setBorder(null);
 			contraseña.setOpaque(true);
 			
 
@@ -47,6 +49,8 @@ import javax.swing.border.Border;
 			
 	        btnIniciarSesion = new JButton("Iniciar Sesion");
 	        btnIniciarSesion.setBounds(720, 610, 140, 50); // Posición ajustada
+	        btnIniciarSesion.setContentAreaFilled(false);
+	        btnIniciarSesion.setBorderPainted(false);
 	        btnIniciarSesion.setOpaque(true);
 	        btnIniciarSesion.setActionCommand("INICIAR SESION");
 
